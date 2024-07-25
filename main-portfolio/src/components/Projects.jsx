@@ -31,7 +31,7 @@ export default function Projects() {
   ]
 
   return (
-    <div name="projects" className='max-w-[1250px] mx-auto my-[100px]'>
+    <div name="portfolio" className='max-w-[1250px] mx-auto my-[100px]'>
       <div className="flex flex-col w-full justify-center h-full p-5">
         <div className="pb-5">
           <p className='text-3xl md:text-5xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>

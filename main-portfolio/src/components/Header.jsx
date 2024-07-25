@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from 'react'
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { Link } from "react-scroll";
 
 export default function Header() {
 
@@ -19,7 +20,7 @@ export default function Header() {
     },
     {
       id: 4,
-      link: 'experience',
+      link: 'skills',
     },
     {
       id: 5,
@@ -37,24 +38,28 @@ export default function Header() {
         </div>
         {
           toggle ?
-          <AiOutlineClose onClick={()=>setToggle(!toggle)} className=' z-10 text-gray-400 text-2xl md:hidden block'/>
-          :
-          <AiOutlineMenu onClick={()=>setToggle(!toggle)} className=' z-10 text-gray-400 text-2xl md:hidden block'/>
+            <AiOutlineClose onClick={() => setToggle(!toggle)} className=' z-10 text-gray-400 text-2xl md:hidden block' />
+            :
+            <AiOutlineMenu onClick={() => setToggle(!toggle)} className=' z-10 text-gray-400 text-2xl md:hidden block' />
         }
         <ul className="hidden md:flex">
           {
             links.map(({ id, link }) => (
               <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-400 hover:scale-105 duration-300'>
-                {link}
+                <Link to={link} smooth duration={500}>
+                  {link}
+                </Link>
               </li>
             ))
           }
         </ul>
-        <ul className={`absolute duration-300 md:hidden w-full h-screen text-gray-400 bg-gradient-to-b from-black to-slate-500 top-0 flex flex-col justify-center items-center ${toggle?'left-0':'left-[-100%]'}`}>
+        <ul className={`absolute duration-300 md:hidden w-full h-screen text-gray-400 bg-gradient-to-b from-black to-slate-500 top-0 flex flex-col justify-center items-center ${toggle ? 'left-0' : 'left-[-100%]'}`}>
           {
             links.map(({ id, link }) => (
               <li key={id} className='p-4 cursor-pointer capitalize font-medium text-gray-400 hover:scale-105 duration-300'>
-                {link}
+                <Link onClick={()=> setToggle(!toggle)} to={link} smooth duration={500}>
+                  {link}
+                </Link>
               </li>
             ))
           }

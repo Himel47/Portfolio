@@ -2,6 +2,7 @@ import React from 'react'
 import himel from "../assets/ami.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {ReactTyped} from 'react-typed';
+import { Link } from "react-scroll";
 
 export default function Main() {
 
@@ -22,12 +23,12 @@ export default function Main() {
         <p className=' sm:max-w-[70%] py-3 text-justify'>
           I am passionate for creating beautiful and functional websites. <br />I love to work on web application using technologies like <b>ReactJS</b>, <b>Express</b>, <b>NodeJS</b>, <b>Dotnet Core</b>, <b>MS SQL Server</b>, and <b>Tailwind</b>.
         </p>
-        <button className="group flex items-center gap-1 justify-center bg-gradient-to-r from-cyan-500 to-blue-600 w-fit my-2 text-white p-3 rounded-md font-bold">
+        <Link to="portfolio" smooth duration={400} className="group flex items-center gap-1 justify-center bg-gradient-to-r from-cyan-500 to-blue-600 w-fit my-2 text-white p-3 rounded-md font-bold">
           Portfolio
           <span className=' group-hover:rotate-90 duration-300'>
             <MdOutlineKeyboardArrowRight size={25}/>
           </span>
-        </button>
+        </Link>
       </div>
       <div className='col-span-1 mx-4 place-items-center'>
         <img src={himel} alt="Himel" className=' w-[420px] rounded-3xl inline'/>

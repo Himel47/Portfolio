@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div name="about" className='max-w-[1200px] mx-auto my-[100px] '>
+    <div name="about" className='max-w-[1250px] mx-auto my-[100px] '>
       <div className='flex flex-col justify-center p-5 w-full h-full'>
         <div className='pb-5'>
           <p className='text-3xl md:text-5xl font-bold inline border-b-4 border-gray-500'>About</p>
